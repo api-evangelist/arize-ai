@@ -2,6 +2,13 @@
   "repo": "arize-ai",
   "feeds": [
     {
+      "source": "https://arize.com/feed/",
+      "feed_url": "https://arize.com/feed/",
+      "title": "",
+      "saved": 6,
+      "method": "feed"
+    },
+    {
       "source": "https://docs.arize.com/phoenix",
       "feed_url": "https://docs.arize.com/phoenix",
       "title": "",
@@ -9,6 +16,6 @@
       "method": "none"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-01T23:35:02Z"
+  "post_count": 12,
+  "fetched": "2026-06-14T20:42:17Z"
 }

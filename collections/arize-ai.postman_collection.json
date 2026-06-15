@@ -1,0 +1,444 @@
+{
+  "item": [
+    {
+      "id": "e60cfe37-7cea-4cf6-8db1-988d2077fc05",
+      "name": "Traces",
+      "description": {
+        "content": "OTLP trace ingestion",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f2091b4e-4ee7-42cc-adc0-03307fd6f648",
+          "name": "Ingest OpenTelemetry traces (OTLP/HTTP)",
+          "request": {
+            "name": "Ingest OpenTelemetry traces (OTLP/HTTP)",
+            "description": {
+              "content": "Accepts an OpenTelemetry ExportTraceServiceRequest payload encoded as\neither Protobuf (application/x-protobuf) or JSON (application/json). Use\nthe space_id and api_key headers (or the OTLP standard authorization\nheader carrying the same key) to authenticate.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "traces"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "(Required) Arize AX Space ID, found in Settings.",
+                "key": "space_id",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "(Required) Arize AX API Key, found in Settings.",
+                "key": "api_key",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"resourceSpans\": [\n    {\n      \"resource\": {\n        \"attributes\": [\n          {\n            \"key\": \"<string>\",\n            \"value\": \"<object>\"\n          },\n          {\n            \"key\": \"<string>\",\n            \"value\": \"<object>\"\n          }\n        ]\n      },\n      \"scopeSpans\": [\n        {\n          \"scope\": {\n            \"name\": \"<string>\",\n            \"version\": \"<string>\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"<string>\",\n              \"spanId\": \"<string>\",\n              \"parentSpanId\": \"<string>\",\n              \"name\": \"<string>\",\n              \"kind\": \"<integer>\",\n              \"startTimeUnixNano\": \"<string>\",\n              \"endTimeUnixNano\": \"<string>\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"<string>\",\n              \"spanId\": \"<string>\",\n              \"parentSpanId\": \"<string>\",\n              \"name\": \"<string>\",\n              \"kind\": \"<integer>\",\n              \"startTimeUnixNano\": \"<string>\",\n              \"endTimeUnixNano\": \"<string>\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        },\n        {\n          \"scope\": {\n            \"name\": \"<string>\",\n            \"version\": \"<string>\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"<string>\",\n              \"spanId\": \"<string>\",\n              \"parentSpanId\": \"<string>\",\n              \"name\": \"<string>\",\n              \"kind\": \"<integer>\",\n              \"startTimeUnixNano\": \"<string>\",\n              \"endTimeUnixNano\": \"<string>\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"<string>\",\n              \"spanId\": \"<string>\",\n              \"parentSpanId\": \"<string>\",\n              \"name\": \"<string>\",\n              \"kind\": \"<integer>\",\n              \"startTimeUnixNano\": \"<string>\",\n              \"endTimeUnixNano\": \"<string>\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"resource\": {\n        \"attributes\": [\n          {\n            \"key\": \"<string>\",\n            \"value\": \"<object>\"\n          },\n          {\n            \"key\": \"<string>\",\n            \"value\": \"<object>\"\n          }\n        ]\n      },\n      \"scopeSpans\": [\n        {\n          \"scope\": {\n            \"name\": \"<string>\",\n            \"version\": \"<string>\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"<string>\",\n              \"spanId\": \"<string>\",\n              \"parentSpanId\": \"<string>\",\n              \"name\": \"<string>\",\n              \"kind\": \"<integer>\",\n              \"startTimeUnixNano\": \"<string>\",\n              \"endTimeUnixNano\": \"<string>\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"<string>\",\n              \"spanId\": \"<string>\",\n              \"parentSpanId\": \"<string>\",\n              \"name\": \"<string>\",\n              \"kind\": \"<integer>\",\n              \"startTimeUnixNano\": \"<string>\",\n              \"endTimeUnixNano\": \"<string>\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        },\n        {\n          \"scope\": {\n            \"name\": \"<string>\",\n            \"version\": \"<string>\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"<string>\",\n              \"spanId\": \"<string>\",\n              \"parentSpanId\": \"<string>\",\n              \"name\": \"<string>\",\n              \"kind\": \"<integer>\",\n              \"startTimeUnixNano\": \"<string>\",\n              \"endTimeUnixNano\": \"<string>\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"<string>\",\n              \"spanId\": \"<string>\",\n              \"parentSpanId\": \"<string>\",\n              \"name\": \"<string>\",\n              \"kind\": \"<integer>\",\n              \"startTimeUnixNano\": \"<string>\",\n              \"endTimeUnixNano\": \"<string>\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f7cb3fb3-3e50-4242-9727-77b015e45719",
+              "name": "Traces accepted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "traces"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Arize AX Space ID, found in Settings.",
+                    "key": "space_id",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Arize AX API Key, found in Settings.",
+                    "key": "api_key",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"resourceSpans\": [\n    {\n      \"resource\": {\n        \"attributes\": [\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          }\n        ]\n      },\n      \"scopeSpans\": [\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5842,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5703,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        },\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 3695,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 1530,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"resource\": {\n        \"attributes\": [\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          }\n        ]\n      },\n      \"scopeSpans\": [\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 943,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 6279,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        },\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5447,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 6478,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"partialSuccess\": {\n    \"rejectedSpans\": 5070,\n    \"errorMessage\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "428b9b95-8aa0-44af-a6fd-9758201d8e30",
+              "name": "Malformed payload.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "traces"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Arize AX Space ID, found in Settings.",
+                    "key": "space_id",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Arize AX API Key, found in Settings.",
+                    "key": "api_key",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"resourceSpans\": [\n    {\n      \"resource\": {\n        \"attributes\": [\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          }\n        ]\n      },\n      \"scopeSpans\": [\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5842,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5703,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        },\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 3695,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 1530,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"resource\": {\n        \"attributes\": [\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          }\n        ]\n      },\n      \"scopeSpans\": [\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 943,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 6279,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        },\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5447,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 6478,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e6f494b5-8a1d-4b22-ab40-bf1f3f67cef9",
+              "name": "Missing or invalid space_id / api_key.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "traces"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Arize AX Space ID, found in Settings.",
+                    "key": "space_id",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Arize AX API Key, found in Settings.",
+                    "key": "api_key",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"resourceSpans\": [\n    {\n      \"resource\": {\n        \"attributes\": [\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          }\n        ]\n      },\n      \"scopeSpans\": [\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5842,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5703,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        },\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 3695,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 1530,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"resource\": {\n        \"attributes\": [\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          }\n        ]\n      },\n      \"scopeSpans\": [\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 943,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 6279,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        },\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5447,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 6478,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "81c1198f-b6af-4436-b65e-d4a816c80363",
+              "name": "Payload too large.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "traces"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Arize AX Space ID, found in Settings.",
+                    "key": "space_id",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Arize AX API Key, found in Settings.",
+                    "key": "api_key",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"resourceSpans\": [\n    {\n      \"resource\": {\n        \"attributes\": [\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          }\n        ]\n      },\n      \"scopeSpans\": [\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5842,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5703,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        },\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 3695,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 1530,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"resource\": {\n        \"attributes\": [\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          }\n        ]\n      },\n      \"scopeSpans\": [\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 943,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 6279,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        },\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5447,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 6478,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Request Entity Too Large",
+              "code": 413,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a42251df-1a70-4716-a085-324565fd48b9",
+              "name": "Rate limited.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "traces"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Arize AX Space ID, found in Settings.",
+                    "key": "space_id",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) Arize AX API Key, found in Settings.",
+                    "key": "api_key",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "(Required) ",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"resourceSpans\": [\n    {\n      \"resource\": {\n        \"attributes\": [\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          }\n        ]\n      },\n      \"scopeSpans\": [\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5842,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5703,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        },\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 3695,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 1530,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"resource\": {\n        \"attributes\": [\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          },\n          {\n            \"key\": \"string\",\n            \"value\": {}\n          }\n        ]\n      },\n      \"scopeSpans\": [\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 943,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 6279,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        },\n        {\n          \"scope\": {\n            \"name\": \"string\",\n            \"version\": \"string\"\n          },\n          \"spans\": [\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 5447,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            },\n            {\n              \"traceId\": \"string\",\n              \"spanId\": \"string\",\n              \"parentSpanId\": \"string\",\n              \"name\": \"string\",\n              \"kind\": 6478,\n              \"startTimeUnixNano\": \"string\",\n              \"endTimeUnixNano\": \"string\",\n              \"attributes\": [\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              ],\n              \"status\": {\n                \"code\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                },\n                \"message\": {\n                  \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                }\n              }\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://otlp.arize.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "api_key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "72958cd0-a0a8-4e87-88ea-7b8eda05b15f",
+    "name": "Arize AX OTLP Ingestion API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Arize AX is built on the OpenInference OpenTelemetry conventions and accepts\ntraces over the OTLP/HTTP protocol. This spec covers the OTLP/HTTP trace\ningestion endpoint. The native GRPC OTLP endpoint\n(https://otlp.arize.com/v1) is not modeled here because OpenAPI cannot\ndescribe GRPC. Arize AX also exposes a GraphQL API (Admin, Annotations,\nCustom Metrics, Dashboards, Models, Monitors, etc.) and a REST API, each\ndocumented at https://arize.com/docs/ax.\n\nAuthentication is performed via the space_id and api_key headers, both\nobtained from the Arize AX Settings page. An EU regional endpoint is also\navailable via Endpoint.ARIZE_EUROPE in the arize-otel SDK.\n\nThis is a best-effort spec derived from public docs and the arize-otel SDK.\n\n\nContact Support:\n Name: Arize AI",
+      "type": "text/plain"
+    }
+  }
+}
