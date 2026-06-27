@@ -50,7 +50,7 @@ apis:
   - url: https://github.com/Arize-ai/phoenix
     type: SourceCode
   - url: https://pypi.org/project/arize-phoenix/
-    type: SDK
+    type: SDKs
   description: Phoenix is Arize's open-source LLM observability platform offering local tracing, evaluation, experiments,
     and prompt iteration. Distributed as a Python package with a local UI, deployable in notebooks, containers, or self-hosted
     servers, and instrumented through OpenInference OpenTelemetry conventions.
@@ -161,7 +161,7 @@ common:
     description: Instrumentation for AWS Bedrock model invocations.
   - name: Vertex AI
     description: Instrumentation for Google Vertex AI and Gemini.
-- type: LLMsTxt
+- type: LlmsText
   url: https://arize.com/llms.txt
 maintainers:
 - FN: Kin Lane
