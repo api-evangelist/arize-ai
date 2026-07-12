@@ -1,0 +1,23 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/arize-ai-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: ArizeApiKey
+  type: apiKey
+  in: header
+  parameter: api_key
+  description: Arize AX API Key (paired with space_id header).
+  sources:
+  - openapi/arize-ai-openapi.yml
+- name: ArizeSpaceId
+  type: apiKey
+  in: header
+  parameter: space_id
+  description: Arize AX Space ID.
+  sources:
+  - openapi/arize-ai-openapi.yml
