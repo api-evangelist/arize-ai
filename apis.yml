@@ -85,6 +85,8 @@ apis:
   description: Alyx is Arize's AI engineering agent that helps developers debug traces, create evaluators, build dashboards,
     and compare experiments inside the Arize AX platform.
 common:
+- type: AgenticAccess
+  url: agentic-access/arize-ai-agentic-access.yml
 - type: DomainSecurity
   url: security/arize-ai-domain-security.yml
 - type: Authentication
