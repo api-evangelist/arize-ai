@@ -1,64 +1,82 @@
 openapi: 3.1.0
 info:
-  title: Arize AX OTLP Ingestion API
-  version: "1.0.0"
+  title: Arize AX OTLP Ingestion Traces API
+  version: 1.0.0
   summary: Best-effort OpenAPI for the Arize AX OpenTelemetry (OTLP/HTTP) ingestion endpoint.
-  description: |
-    Arize AX is built on the OpenInference OpenTelemetry conventions and accepts
+  description: 'Arize AX is built on the OpenInference OpenTelemetry conventions and accepts
+
     traces over the OTLP/HTTP protocol. This spec covers the OTLP/HTTP trace
+
     ingestion endpoint. The native GRPC OTLP endpoint
+
     (https://otlp.arize.com/v1) is not modeled here because OpenAPI cannot
+
     describe GRPC. Arize AX also exposes a GraphQL API (Admin, Annotations,
+
     Custom Metrics, Dashboards, Models, Monitors, etc.) and a REST API, each
+
     documented at https://arize.com/docs/ax.
 
+
     Authentication is performed via the space_id and api_key headers, both
+
     obtained from the Arize AX Settings page. An EU regional endpoint is also
+
     available via Endpoint.ARIZE_EUROPE in the arize-otel SDK.
 
+
     This is a best-effort spec derived from public docs and the arize-otel SDK.
+
+    '
   contact:
     name: Arize AI
     url: https://arize.com/docs/ax
 servers:
-  - url: https://otlp.arize.com
-    description: Arize AX OTLP ingestion (global)
+- url: https://otlp.arize.com
+  description: Arize AX OTLP ingestion (global)
+security:
+- ArizeApiKey: []
+  ArizeSpaceId: []
 tags:
-  - name: Traces
-    description: OTLP trace ingestion
+- name: Traces
+  description: OTLP trace ingestion
 paths:
   /v1/traces:
     post:
       tags:
-        - Traces
+      - Traces
       summary: Ingest OpenTelemetry traces (OTLP/HTTP)
-      description: |
-        Accepts an OpenTelemetry ExportTraceServiceRequest payload encoded as
+      description: 'Accepts an OpenTelemetry ExportTraceServiceRequest payload encoded as
+
         either Protobuf (application/x-protobuf) or JSON (application/json). Use
+
         the space_id and api_key headers (or the OTLP standard authorization
+
         header carrying the same key) to authenticate.
+
+        '
       operationId: exportTraces
       parameters:
-        - in: header
-          name: space_id
-          required: true
-          schema:
-            type: string
-          description: Arize AX Space ID, found in Settings.
-        - in: header
-          name: api_key
-          required: true
-          schema:
-            type: string
-          description: Arize AX API Key, found in Settings.
-        - in: header
-          name: Content-Type
-          required: true
-          schema:
-            type: string
-            enum:
-              - application/x-protobuf
-              - application/json
+      - in: header
+        name: space_id
+        required: true
+        schema:
+          type: string
+        description: Arize AX Space ID, found in Settings.
+      - in: header
+        name: api_key
+        required: true
+        schema:
+          type: string
+        description: Arize AX API Key, found in Settings.
+      - in: header
+        name: Content-Type
+        required: true
+        schema:
+          type: string
+          enum:
+          - application/x-protobuf
+          - application/json
       requestBody:
         required: true
         content:
@@ -71,32 +89,22 @@ paths:
             schema:
               $ref: '#/components/schemas/ExportTraceServiceRequest'
       responses:
-        "200":
+        '200':
           description: Traces accepted.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ExportTraceServiceResponse'
-        "400":
+        '400':
           description: Malformed payload.
-        "401":
+        '401':
           description: Missing or invalid space_id / api_key.
-        "413":
+        '413':
           description: Payload too large.
-        "429":
+        '429':
           description: Rate limited.
 components:
   schemas:
-    ExportTraceServiceRequest:
-      type: object
-      description: |
-        OTLP ExportTraceServiceRequest. See the opentelemetry-proto repo for the
-        canonical schema. Modeled here loosely to keep this spec self-contained.
-      properties:
-        resourceSpans:
-          type: array
-          items:
-            $ref: '#/components/schemas/ResourceSpans'
     ResourceSpans:
       type: object
       properties:
@@ -123,6 +131,18 @@ components:
                 type: array
                 items:
                   $ref: '#/components/schemas/Span'
+    ExportTraceServiceRequest:
+      type: object
+      description: 'OTLP ExportTraceServiceRequest. See the opentelemetry-proto repo for the
+
+        canonical schema. Modeled here loosely to keep this spec self-contained.
+
+        '
+      properties:
+        resourceSpans:
+          type: array
+          items:
+            $ref: '#/components/schemas/ResourceSpans'
     Span:
       type: object
       properties:
@@ -180,6 +200,3 @@ components:
       in: header
       name: space_id
       description: Arize AX Space ID.
-security:
-  - ArizeApiKey: []
-    ArizeSpaceId: []
