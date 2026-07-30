@@ -2,7 +2,20 @@ aid: arize-ai
 url: https://raw.githubusercontent.com/api-evangelist/arize-ai/refs/heads/main/apis.yml
 name: Arize AI
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/arize-ai.png
 tags:
 - LLM Observability
 - ML Monitoring
@@ -33,9 +46,11 @@ apis:
     type: Documentation
   - url: https://app.arize.com/
     type: ApplicationURL
-  description: Arize AX is the commercial AI engineering platform covering tracing, evaluation, experiments, prompt management,
-    annotations, and dashboards for LLM applications and agents. Built on OpenInference and OpenTelemetry with 30+ provider
-    integrations, and available in Generative and ML & CV variants for different workloads.
+  description: >-
+    Arize AX is the commercial AI engineering platform covering tracing, evaluation, experiments, prompt
+    management, annotations, and dashboards for LLM applications and agents. Built on OpenInference and
+    OpenTelemetry with 30+ provider integrations, and available in Generative and ML & CV variants for
+    different workloads.
 - aid: arize-ai:phoenix
   name: Phoenix
   tags:
@@ -51,9 +66,10 @@ apis:
     type: SourceCode
   - url: https://pypi.org/project/arize-phoenix/
     type: SDKs
-  description: Phoenix is Arize's open-source LLM observability platform offering local tracing, evaluation, experiments,
-    and prompt iteration. Distributed as a Python package with a local UI, deployable in notebooks, containers, or self-hosted
-    servers, and instrumented through OpenInference OpenTelemetry conventions.
+  description: >-
+    Phoenix is Arize's open-source LLM observability platform offering local tracing, evaluation, experiments,
+    and prompt iteration. Distributed as a Python package with a local UI, deployable in notebooks, containers,
+    or self-hosted servers, and instrumented through OpenInference OpenTelemetry conventions.
 - aid: arize-ai:openinference
   name: OpenInference
   tags:
@@ -67,10 +83,11 @@ apis:
     type: SourceCode
   - url: https://opentelemetry.io/
     type: Specification
-  description: OpenInference is Arize's open-source set of OpenTelemetry conventions and instrumentation libraries for
-    LLM applications, agents, RAG pipelines, and frameworks. Provides Python and TypeScript instrumentors for OpenAI, Anthropic,
-    LangChain, LlamaIndex, CrewAI, and dozens more, emitting OTLP-compatible spans consumable by Phoenix, Arize AX, or
-    any OTel backend.
+  description: >-
+    OpenInference is Arize's open-source set of OpenTelemetry conventions and instrumentation libraries
+    for LLM applications, agents, RAG pipelines, and frameworks. Provides Python and TypeScript instrumentors
+    for OpenAI, Anthropic, LangChain, LlamaIndex, CrewAI, and dozens more, emitting OTLP-compatible spans
+    consumable by Phoenix, Arize AX, or any OTel backend.
 - aid: arize-ai:alyx
   name: Alyx
   tags:
@@ -82,8 +99,18 @@ apis:
   properties:
   - url: https://arize.com/alyx
     type: Documentation
-  description: Alyx is Arize's AI engineering agent that helps developers debug traces, create evaluators, build dashboards,
-    and compare experiments inside the Arize AX platform.
+  description: >-
+    Alyx is Arize's AI engineering agent that helps developers debug traces, create evaluators, build
+    dashboards, and compare experiments inside the Arize AX platform.
+- aid: arize-ai:arize-ai-traces-api
+  name: Arize AI Traces API
+  description: OTLP trace ingestion
+  humanURL: https://arize.com/docs/ax
+  tags:
+  - Traces
+  properties:
+  - type: OpenAPI
+    url: openapi/arize-ai-traces-api-openapi.yml
 common:
 - type: AgenticAccess
   url: agentic-access/arize-ai-agentic-access.yml
