@@ -1,0 +1,14 @@
+{
+  "provider": "arize-ai",
+  "sources": [
+    "arize-ai-traces-api-openapi.yml"
+  ],
+  "outputs": [
+    "arize-ai-traces-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
