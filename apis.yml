@@ -112,6 +112,16 @@ apis:
   - type: OpenAPI
     url: openapi/arize-ai-traces-api-openapi.yml
 common:
+- type: IssueTracker
+  url: https://github.com/Arize-ai/phoenix/issues
+- type: Releases
+  url: https://github.com/Arize-ai/phoenix/releases
+- type: SecurityPolicy
+  url: https://github.com/Arize-ai/phoenix/blob/main/SECURITY.md
+- type: CodeOfConduct
+  url: https://github.com/Arize-ai/phoenix/blob/main/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/Arize-ai/phoenix/blob/main/CONTRIBUTING.md
 - type: AgenticAccess
   url: agentic-access/arize-ai-agentic-access.yml
 - type: DomainSecurity
