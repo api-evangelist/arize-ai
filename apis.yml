@@ -31,7 +31,7 @@ description: Arize AI is an AI engineering and observability platform for LLM ap
   Arize is vendor- and framework-agnostic with 30+ instrumentation providers and an OTLP-native ingestion path.
 created: '2026-05-23'
 modified: '2026-05-23'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: arize-ai:arize-ax
   name: Arize AX
