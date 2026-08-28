@@ -2,6 +2,19 @@ aid: arize-ai
 url: https://raw.githubusercontent.com/api-evangelist/arize-ai/refs/heads/main/apis.yml
 name: Arize AI
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: true
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  - pricing
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: self-serve
