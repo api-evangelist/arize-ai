@@ -123,6 +123,11 @@ apis:
 - aid: arize-ai:alyx
   name: Alyx
   tags:
+  - AI Agents
+  - Engineering Assistant
+  - Debugging
+  - Evaluation
+  tags_raw:
   - AI Agent
   - Engineering Assistant
   - Debugging
