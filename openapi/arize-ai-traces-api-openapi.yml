@@ -1,33 +1,11 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Arize AX OTLP Ingestion Traces API
   version: 1.0.0
   summary: Best-effort OpenAPI for the Arize AX OpenTelemetry (OTLP/HTTP) ingestion endpoint.
   description: 'Arize AX is built on the OpenInference OpenTelemetry conventions and accepts
 
-    traces over the OTLP/HTTP protocol. This spec covers the OTLP/HTTP trace
-
-    ingestion endpoint. The native GRPC OTLP endpoint
-
-    (https://otlp.arize.com/v1) is not modeled here because OpenAPI cannot
-
-    describe GRPC. Arize AX also exposes a GraphQL API (Admin, Annotations,
-
-    Custom Metrics, Dashboards, Models, Monitors, etc.) and a REST API, each
-
-    documented at https://arize.com/docs/ax.
-
-
-    Authentication is performed via the space_id and api_key headers, both
-
-    obtained from the Arize AX Settings page. An EU regional endpoint is also
-
-    available via Endpoint.ARIZE_EUROPE in the arize-otel SDK.
-
-
-    This is a best-effort spec derived from public docs and the arize-otel SDK.
-
-    '
+    traces over the OTLP/HTTP protocol.'
   contact:
     name: Arize AI
     url: https://arize.com/docs/ax
@@ -52,9 +30,7 @@ paths:
 
         the space_id and api_key headers (or the OTLP standard authorization
 
-        header carrying the same key) to authenticate.
-
-        '
+        header carrying the same key) to authenticate.'
       operationId: exportTraces
       parameters:
       - in: header
@@ -131,6 +107,17 @@ components:
                 type: array
                 items:
                   $ref: '#/components/schemas/Span'
+    ExportTraceServiceResponse:
+      type: object
+      properties:
+        partialSuccess:
+          type: object
+          properties:
+            rejectedSpans:
+              type: integer
+              format: int64
+            errorMessage:
+              type: string
     ExportTraceServiceRequest:
       type: object
       description: 'OTLP ExportTraceServiceRequest. See the opentelemetry-proto repo for the
@@ -143,6 +130,13 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ResourceSpans'
+    KeyValue:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: object
     Span:
       type: object
       properties:
@@ -170,24 +164,6 @@ components:
             code:
               type: integer
             message:
-              type: string
-    KeyValue:
-      type: object
-      properties:
-        key:
-          type: string
-        value:
-          type: object
-    ExportTraceServiceResponse:
-      type: object
-      properties:
-        partialSuccess:
-          type: object
-          properties:
-            rejectedSpans:
-              type: integer
-              format: int64
-            errorMessage:
               type: string
   securitySchemes:
     ArizeApiKey:
