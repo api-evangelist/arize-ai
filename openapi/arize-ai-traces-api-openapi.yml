@@ -81,62 +81,6 @@ paths:
           description: Rate limited.
 components:
   schemas:
-    ResourceSpans:
-      type: object
-      properties:
-        resource:
-          type: object
-          properties:
-            attributes:
-              type: array
-              items:
-                $ref: '#/components/schemas/KeyValue'
-        scopeSpans:
-          type: array
-          items:
-            type: object
-            properties:
-              scope:
-                type: object
-                properties:
-                  name:
-                    type: string
-                  version:
-                    type: string
-              spans:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Span'
-    ExportTraceServiceResponse:
-      type: object
-      properties:
-        partialSuccess:
-          type: object
-          properties:
-            rejectedSpans:
-              type: integer
-              format: int64
-            errorMessage:
-              type: string
-    ExportTraceServiceRequest:
-      type: object
-      description: 'OTLP ExportTraceServiceRequest. See the opentelemetry-proto repo for the
-
-        canonical schema. Modeled here loosely to keep this spec self-contained.
-
-        '
-      properties:
-        resourceSpans:
-          type: array
-          items:
-            $ref: '#/components/schemas/ResourceSpans'
-    KeyValue:
-      type: object
-      properties:
-        key:
-          type: string
-        value:
-          type: object
     Span:
       type: object
       properties:
@@ -165,6 +109,62 @@ components:
               type: integer
             message:
               type: string
+    ExportTraceServiceRequest:
+      type: object
+      description: 'OTLP ExportTraceServiceRequest. See the opentelemetry-proto repo for the
+
+        canonical schema. Modeled here loosely to keep this spec self-contained.
+
+        '
+      properties:
+        resourceSpans:
+          type: array
+          items:
+            $ref: '#/components/schemas/ResourceSpans'
+    ExportTraceServiceResponse:
+      type: object
+      properties:
+        partialSuccess:
+          type: object
+          properties:
+            rejectedSpans:
+              type: integer
+              format: int64
+            errorMessage:
+              type: string
+    KeyValue:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: object
+    ResourceSpans:
+      type: object
+      properties:
+        resource:
+          type: object
+          properties:
+            attributes:
+              type: array
+              items:
+                $ref: '#/components/schemas/KeyValue'
+        scopeSpans:
+          type: array
+          items:
+            type: object
+            properties:
+              scope:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  version:
+                    type: string
+              spans:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Span'
   securitySchemes:
     ArizeApiKey:
       type: apiKey
