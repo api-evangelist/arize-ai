@@ -81,6 +81,13 @@ paths:
           description: Rate limited.
 components:
   schemas:
+    KeyValue:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: object
     Span:
       type: object
       properties:
@@ -121,24 +128,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ResourceSpans'
-    ExportTraceServiceResponse:
-      type: object
-      properties:
-        partialSuccess:
-          type: object
-          properties:
-            rejectedSpans:
-              type: integer
-              format: int64
-            errorMessage:
-              type: string
-    KeyValue:
-      type: object
-      properties:
-        key:
-          type: string
-        value:
-          type: object
     ResourceSpans:
       type: object
       properties:
@@ -165,6 +154,17 @@ components:
                 type: array
                 items:
                   $ref: '#/components/schemas/Span'
+    ExportTraceServiceResponse:
+      type: object
+      properties:
+        partialSuccess:
+          type: object
+          properties:
+            rejectedSpans:
+              type: integer
+              format: int64
+            errorMessage:
+              type: string
   securitySchemes:
     ArizeApiKey:
       type: apiKey
