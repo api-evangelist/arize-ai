@@ -81,13 +81,6 @@ paths:
           description: Rate limited.
 components:
   schemas:
-    KeyValue:
-      type: object
-      properties:
-        key:
-          type: string
-        value:
-          type: object
     ExportTraceServiceResponse:
       type: object
       properties:
@@ -137,6 +130,13 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ResourceSpans'
+    KeyValue:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: object
     Span:
       type: object
       properties:
