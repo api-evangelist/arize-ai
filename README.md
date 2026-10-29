@@ -1,4 +1,4 @@
-# Arize AI (arize-ai)
+# Arize AI
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,128 +66,129 @@
 
 Arize AI is an AI engineering and observability platform for LLM applications, agents, and traditional ML systems. The commercial Arize AX platform (with Generative and ML & CV variants) provides tracing, evaluation, experiments, prompt management, and the Alyx AI engineering agent, built on the OpenInference OpenTelemetry conventions. Phoenix is the open-source counterpart used by tens of thousands of developers for local tracing, evaluation, and prompt iteration. Arize is vendor- and framework-agnostic with 30+ instrumentation providers and an OTLP-native ingestion path.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/arize-ai/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/arize-ai/refs/heads/main/apis.yml)
+**Areas:** LLM Observability · ML Monitoring · Open Source · OpenTelemetry · Phoenix · Tracing · Evaluation
 
-## Scope
+## Arize AI on APIs.io
 
-- **Type:** Index
+Everything profiled for Arize AI is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/arize-ai/](https://apis.io/providers/arize-ai/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (5)
 
-- LLM Observability
-- ML Monitoring
-- Open Source
-- OpenTelemetry
-- Phoenix
-- Tracing
-- Evaluation
+- [Arize AX](https://apis.io/apis/arize-ai/arize-ax/) — Arize AX is the commercial AI engineering platform covering tracing, evaluation, experiments, prompt management, annotations, and dashboards for LLM…
+- [Phoenix](https://apis.io/apis/arize-ai/phoenix/) — Phoenix is Arize's open-source LLM observability platform offering local tracing, evaluation, experiments, and prompt iteration. Distributed as a Python…
+- [OpenInference](https://apis.io/apis/arize-ai/openinference/) — OpenInference is Arize's open-source set of OpenTelemetry conventions and instrumentation libraries for LLM applications, agents, RAG pipelines, and…
+- [Alyx](https://apis.io/apis/arize-ai/alyx/) — Alyx is Arize's AI engineering agent that helps developers debug traces, create evaluators, build dashboards, and compare experiments inside the Arize AX…
+- [Arize AI Traces API](https://apis.io/apis/arize-ai/arize-ai-traces-api/) — OTLP trace ingestion
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-23
-- **Modified:** 2026-05-23
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (1)
 
-### Arize AX
+Model Context Protocol servers that expose the API to agents.
 
-Arize AX is the commercial AI engineering platform covering tracing, evaluation, experiments, prompt management, annotations, and dashboards for LLM applications and agents. Built on OpenInference and OpenTelemetry with 30+ provider integrations, and available in Generative and ML & CV variants for different workloads.
+- [Moved to /providers/arize-ai/](https://apis.io/servers/arize-ai/arize-ai/)
 
-- **Human URL:** [https://arize.com/docs/ax](https://arize.com/docs/ax)
+#### Agentic access (1)
 
-#### Tags
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- LLM Observability
-- Evaluation
-- Tracing
-- Enterprise
+- [Arize Ai Agentic Access](https://apis.io/agentic-access/arize-ai/arize-ai-agentic-access/)
 
-#### Properties
+#### Collections (2)
 
-- [Documentation](https://arize.com/docs/ax)
-- [Application U R L](https://app.arize.com/)
-- [Postman Collection](collections/arize-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/arize-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Postman and Open Collection request collections.
 
-### Phoenix
+- [Arize AX OTLP Ingestion API](https://apis.io/collections/arize-ai/open-arize-ai/)
+- [Arize AX OTLP Ingestion Traces API](https://apis.io/collections/arize-ai/open-arize-ai-traces-api/)
 
-Phoenix is Arize's open-source LLM observability platform offering local tracing, evaluation, experiments, and prompt iteration. Distributed as a Python package with a local UI, deployable in notebooks, containers, or self-hosted servers, and instrumented through OpenInference OpenTelemetry conventions.
+#### Security (2)
 
-- **Human URL:** [https://phoenix.arize.com/](https://phoenix.arize.com/)
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags
+- [Arize Ai Authentication](https://apis.io/security/arize-ai/arize-ai-authentication/)
+- [Arize Ai Domain Security](https://apis.io/security/arize-ai/arize-ai-domain-security/)
 
-- Open Source
-- LLM Observability
-- Tracing
-- Evaluation
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://docs.arize.com/phoenix)
-- [Source Code](https://github.com/Arize-ai/phoenix)
-- [SDK](https://pypi.org/project/arize-phoenix/)
-- [Postman Collection](collections/arize-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/arize-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Arize Ai Plans Pricing](https://apis.io/plans/arize-ai/arize-ai-plans-pricing/)
 
-### OpenInference
+#### Rate limits (1)
 
-OpenInference is Arize's open-source set of OpenTelemetry conventions and instrumentation libraries for LLM applications, agents, RAG pipelines, and frameworks. Provides Python and TypeScript instrumentors for OpenAI, Anthropic, LangChain, LlamaIndex, CrewAI, and dozens more, emitting OTLP-compatible spans consumable by Phoenix, Arize AX, or any OTel backend.
+Published request limits.
 
-- **Human URL:** [https://github.com/Arize-ai/openinference](https://github.com/Arize-ai/openinference)
+- [Arize Ai Rate Limits](https://apis.io/rate-limits/arize-ai/arize-ai-rate-limits/)
 
-#### Tags
+#### FinOps (1)
 
-- Open Source
-- OpenTelemetry
-- Tracing
-- Instrumentation
+What the API costs to run, by operation.
 
-#### Properties
+- [Arize Ai Finops](https://apis.io/finops/arize-ai/arize-ai-finops/)
 
-- [Source Code](https://github.com/Arize-ai/openinference)
-- [Specification](https://opentelemetry.io/)
-- [Postman Collection](collections/arize-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/arize-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+## Where to find this API
 
-### Alyx
-
-Alyx is Arize's AI engineering agent that helps developers debug traces, create evaluators, build dashboards, and compare experiments inside the Arize AX platform.
-
-- **Human URL:** [https://arize.com/alyx](https://arize.com/alyx)
-
-#### Tags
-
-- AI Agent
-- Engineering Assistant
-- Debugging
-- Evaluation
-
-#### Properties
-
-- [Documentation](https://arize.com/alyx)
-- [Postman Collection](collections/arize-ai.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/arize-ai.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://arize.com/)
 - [Documentation](https://arize.com/docs/ax)
-- [Phoenix Documentation](https://docs.arize.com/phoenix)
-- [Blog](https://arize.com/blog/)
 - [Pricing](https://arize.com/pricing/)
-- [Login](https://app.arize.com/)
-- [GitHub Organization](https://github.com/Arize-ai)
-- [GitHub Repository](https://github.com/Arize-ai/phoenix)
-- [GitHub Repository](https://github.com/Arize-ai/openinference)
-- [LinkedIn](https://www.linkedin.com/company/arizeai/)
-- [Community](https://arize-ai.slack.com/)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
-- [L L Ms Txt](https://arize.com/llms.txt)
+- [Blog](https://arize.com/blog/)
+- [GitHub](https://github.com/Arize-ai)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 34.4** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.7 |
+| Contract quality | 53.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 34.2 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 22.4 |
+
+**Agent readiness 26.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/arize-ai/](https://apis.io/providers/arize-ai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Arize AI: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/arize-ai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
